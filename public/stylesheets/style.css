@@ -1,3 +1,46 @@
 body {
-    padding: 50px;
-}
+  padding-top: 50px; }
+
+label {
+  margin-top: 7px; }
+
+#nav-items a {
+  color: yellow; }
+
+#brand-name {
+  color: yellow; }
+
+form label {
+  color: red; }
+
+.itinerary-selector {
+  padding-top: 20px; }
+  .itinerary-selector select {
+    display: block;
+    width: 20%; }
+
+.map {
+  float: left;
+  margin: 0;
+  width: 67%;
+  height: 100vh;
+  background-image: url("/nyc-subway.png");
+  background-size: cover; }
+
+.responsive-map {
+  width: 100%; }
+
+.add-day {
+  background-color: #41c3f2;
+  color: white; }
+
+.content {
+  height: 100vh;
+  background-color: black;
+  z-index: 100;
+  float: left;
+  width: 33%; }
+  .content ::after {
+    content: '';
+    display: block;
+    clear: both; }

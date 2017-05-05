@@ -1,5 +1,47 @@
 {% extends "layout.html" %}
 
-{% block content%}
-<h1>Nunjucks works</h1>
+{% block content %}
+<!--<h2>Cities</h2>-->
+<div class="container trip-planner">
+    <div class="itinerary-selector">
+        <form method="POST" action="/search">
+            <!--<select name="">
+            {% for place in places%}
+                <option value="{{place.city}}">{{ place.city }}</option>
+            {% endfor %}
+            </select>-->
+            <label for="hotel">Hotels</label>
+            <select name="hotel">
+            {% for hotel in hotels %}
+                <option value="{{hotel.name}}">{{ hotel.name }}</option>
+            {% endfor %}
+            </select>
+            <label for="activity">Activities</label>
+            <select name="activity">
+            {% for activity in activities %}
+                <option value="{{activity.name}}">{{ activity.name }}</option>
+            {% endfor %}
+            </select>
+            <label for="restaurant">Restaurants</label>
+            <select name="restaurant">
+            {% for restaurant in restaurants %}
+                <option value="{{restaurant.name}}">{{ restaurant.name }}</option>
+            {% endfor %}
+            </select>
+        </form>
+    </div>
+</div>
+<h2>Day #</h2>
+<div class="container trip-planner">
+    <div class="day-selector banner">
+        <button class="btn btn-info">1</button>
+        <button class="btn btn-info">2</button>
+        <button class="btn add-day">+</button>
+    </div>
+    <div class="itinerary summary">
+        <h4>My Hotel</h4>
+        <h4>My Restaurants</h4>
+        <h4>My Activities</h4>
+    </div>
+</div>
 {% endblock %}

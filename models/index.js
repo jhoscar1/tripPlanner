@@ -25,7 +25,7 @@ const Hotel = db.define('hotel', {
     name: {
         type: Sequelize.STRING
     },
-    numStars: {
+    num_stars: {
         type: Sequelize.FLOAT,
         validate: {
             min: 1,
@@ -42,7 +42,7 @@ const Activity = db.define('activity', {
     name: {
         type: Sequelize.STRING
     },
-    ageRange: {
+    age_range: {
         type: Sequelize.STRING
         // Validation??
     }
@@ -69,6 +69,7 @@ Activity.belongsTo(Place);
 Hotel.belongsTo(Place);
 
 module.exports = {
+    Place,
     Restaurant,
     Activity,
     Hotel,
